@@ -15,3 +15,6 @@ do.call("rbind", list(df1, df2, df3))
 ls(pattern = "df")
 df_list = ls(pattern = "df")
 do.call(rbind, lapply(df_list, "get"))
+
+# 하나의 데이터프레임 객체를 원하는 개수 만큼 복제하고자 할 때
+df_binded = do.call(rbind, lapply(rep("df", 10), "get"))
