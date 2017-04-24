@@ -14,3 +14,14 @@ text_extractor = function(x, start_pattern = ">", end_pattern = "<", adj_start =
   }
   return(text)
 }
+
+# > dates_sub
+#  [1] "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.04.19.</dd>" "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.04.05.</dd>"
+#  [3] "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.04.11.</dd>" "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.04.24.</dd>"
+#  [5] "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.03.17.</dd>" "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.04.20.</dd>"
+#  [7] "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.04.24.</dd>" "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.04.23.</dd>"
+#  [9] "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.04.17.</dd>" "\t\t\t\t\t\t\t<dd class=\"txt_inline\">2017.04.05.</dd>"
+
+# > text_extractor(dates_sub)
+#  [1] "2017.04.19." "2017.04.05." "2017.04.11." "2017.04.24." "2017.03.17." "2017.04.20." "2017.04.24." "2017.04.23."
+#  [9] "2017.04.17." "2017.04.05."
