@@ -1,7 +1,0 @@
-gregexpr(pattern = "[0-9]", text = "asdf1234ASDF")
-gregexpr(pattern = "[a-z]", text = "asdf1234ASDF")
-gregexpr(pattern = "[A-Z]", text = "asdf1234ASDF")
-gregexpr(pattern = "[a-zA-Z]", text = "asdf1234ASDF")
-gregexpr(pattern = "[ㄱ-ㅎ]", text = "ㄱㄴ12가나34ㅏㅣ")
-gregexpr(pattern = "[ㅏ-ㅣ]", text = "ㄱㄴ12가나34ㅏㅣ")
-gregexpr(pattern = "[가-힣]", text = "ㄱㄴ12가나34ㅏㅣ")
