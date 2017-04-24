@@ -1,4 +1,4 @@
 # encaion
 main page of Encaion's things.
 
-각종 시각화 예제를 모아놨습니다.
+지리데이터 관련 예제 입니다.
