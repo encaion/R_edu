@@ -1,6 +1,6 @@
 # special variables in ggplot 
 # ..density..
 # ..count..
-# ..scale..
+# ..scaled..
 
 # what else?
