@@ -12,7 +12,6 @@ df3 = data.frame(id = 7:9,
 do.call("rbind", list(df1, df2, df3))
 
 # 데이터 객체가 텍스트로 있을 경우
-ls(pattern = "df")
 df_list = ls(pattern = "df")
 do.call(rbind, lapply(df_list, "get"))
 
