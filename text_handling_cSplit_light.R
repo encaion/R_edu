@@ -1,4 +1,4 @@
-cSplit_light = function(x, splitCol, sep, drop = TRUE){
+cSplit_light = function(x, splitCol, sep = ",", drop = TRUE){
   sep_points = gregexpr(pattern = sep, text = x[, splitCol])
   max_column = max(sapply(sep_points, "length")) + 1
   
