@@ -24,10 +24,15 @@ json_text = '{
 		"C3R2":{"q":3,"r":2},
 		"C0R3":{"q":0,"r":3},
 		"C1R3":{"q":1,"r":3},
-		"C2R3":{"q":2,"r":3},
-		"C3R3":{"q":3,"r":3}
+		"C2R3":{"q":2,"r":3, "textCol":"#000000"},
+		"C3R3":{"q":3,"r":3, "col":"#FFAACC"},
+    "ssss":{"q":10,"r":10}
 	}
 }'
 
 obj_json = fromJSON(json_text)
-hexjsonwidget(obj_json)
+hexjsonwidget(jsondata = obj_json, 
+              col_hexfill = "#FFE500", 
+              col_gridfill = "#123123", 
+              col_textfill = "#FF0000",
+              grid = "on")
