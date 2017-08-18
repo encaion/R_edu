@@ -33,8 +33,8 @@ ggplot() +
   labs(x = NULL, y = NULL) + 
   annotate(geom = "text",
            x = df$date,
-           y = df$share_o + df$share_x,
-           label = df$share_o + df$share_x,
+           y = dfsum,
+           label = df$sum,
            fontface = "bold",
            size = 5,
            vjust = -0.5) +
