@@ -33,7 +33,7 @@ ggplot() +
   labs(x = NULL, y = NULL) + 
   annotate(geom = "text",
            x = df$date,
-           y = dfsum,
+           y = df$sum,
            label = df$sum,
            fontface = "bold",
            size = 5,
