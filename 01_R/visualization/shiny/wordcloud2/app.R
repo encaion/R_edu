@@ -1,0 +1,2 @@
+# app
+shinyApp(ui, server)
