@@ -7,8 +7,8 @@
   - API: 서로 다른 프로그램이 기능을 공유할 수 있게 절차와 규약을 정의한 것
 
 웹 API는 일반적으로 HTTP통신을 사용하는데 클라이언트 프로그램은 API를 제공하는 서버에 HTTP요청을 보냅니다. 그러면 서버가 이러한 요청을 기반으로 XML또는 JSON형식 등으로 응답합니다.
+<img src="https://github.com/encaion/encaion/blob/master/02_Python/study/DataGram/python_ml/chapter_2_3/web_api_HTTP_call.png", style="width:400px", align = "left">
 
-<img src = "https://github.com/encaion/encaion/blob/master/02_Python/study/DataGram/python_ml/chapter_2_3/web_api_HTTP_call.png", width="500">
 !["test"](https://github.com/encaion/encaion/blob/master/02_Python/study/DataGram/python_ml/chapter_2_3/web_api_HTTP_call.png)
 
 
