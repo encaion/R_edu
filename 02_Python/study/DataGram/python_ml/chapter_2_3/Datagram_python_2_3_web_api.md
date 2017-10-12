@@ -8,7 +8,7 @@
 
 웹 API는 일반적으로 HTTP통신을 사용하는데 클라이언트 프로그램은 API를 제공하는 서버에 HTTP요청을 보냅니다. 그러면 서버가 이러한 요청을 기반으로 XML또는 JSON형식 등으로 응답합니다.
 
-<img src="web_api_HTTP_call.png" alt="web_api_HTTP_call.png" style="width:400px", align = "left">
+<img src="~/web_api_HTTP_call.png" alt="web_api_HTTP_call.png" style="width:400px", align = "left">
 
 ### 웹 API를 제공하는 이유
  - 크롤링으로 인해 야기되는 서버 부하 감소
