@@ -36,7 +36,7 @@ OpenWeatherMap을 사용하려면 개발자 등록 후 API키를 발급받아야
 &nbsp; 3) 발급된 API 확인<br>
 <hr>
 
-!["test"](https://github.com/encaion/encaion/blob/master/02_Python/study/DataGram/python_ml/chapter_2_3/"webpage_openweathermap_apikey.png)
+!["test"](https://github.com/encaion/encaion/blob/master/02_Python/study/DataGram/python_ml/chapter_2_3/webpage_openweathermap_apikey.png)
 
 <hr>
 
