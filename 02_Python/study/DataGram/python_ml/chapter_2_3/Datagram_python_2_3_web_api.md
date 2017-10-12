@@ -7,8 +7,8 @@
   - API: 서로 다른 프로그램이 기능을 공유할 수 있게 절차와 규약을 정의한 것
 
 웹 API는 일반적으로 HTTP통신을 사용하는데 클라이언트 프로그램은 API를 제공하는 서버에 HTTP요청을 보냅니다. 그러면 서버가 이러한 요청을 기반으로 XML또는 JSON형식 등으로 응답합니다.
-<img src="https://github.com/encaion/encaion/blob/master/02_Python/study/DataGram/python_ml/chapter_2_3/web_api_HTTP_call.png", style="width:400px", align = "left">
 
+!["test"](https://github.com/encaion/encaion/blob/master/02_Python/study/DataGram/python_ml/chapter_2_3/web_api_HTTP_call.png)
 
 ### 웹 API를 제공하는 이유
  - 크롤링으로 인해 야기되는 서버 부하 감소
@@ -22,7 +22,8 @@
 
 (http://openweathermap.org)
 
-<img src="webpage_openweathermap.png" alt="webpage_openweathermap.png" style="width:800px", align = "left">
+!["test"](https://github.com/encaion/encaion/blob/master/02_Python/study/DataGram/python_ml/chapter_2_3/webpage_openweathermap.png)
+
 
 OpenWeatherMap을 사용하려면 개발자 등록 후 API키를 발급받아야 함<br>
 위 사이트 API는 기본적으로 유료이지만 5일 까지 날씨는 무료로 사용할 수 있습니다. <br>
@@ -35,7 +36,7 @@ OpenWeatherMap을 사용하려면 개발자 등록 후 API키를 발급받아야
 &nbsp; 3) 발급된 API 확인<br>
 <hr>
 
-<img src="webpage_openweathermap_apikey.png", alt="webpage_openweathermap_apikey.png" style="width:800px", align = "left">
+!["test"](https://github.com/encaion/encaion/blob/master/02_Python/study/DataGram/python_ml/chapter_2_3/"webpage_openweathermap_apikey.png)
 
 <hr>
 
