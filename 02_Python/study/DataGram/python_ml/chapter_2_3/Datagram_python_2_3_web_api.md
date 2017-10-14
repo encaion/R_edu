@@ -30,7 +30,7 @@ OpenWeatherMap을 사용하려면 개발자 등록 후 API키를 발급받아야
  ※ 단, 1분에 60번만 호출 가능
 
 <hr>
-#### API key 발급 절차
+#### API key 발급 절차 <br>
 &nbsp; 1) 회원가입<br>
 &nbsp; 2) API 사용 용도 기입<br>
 &nbsp; 3) 발급된 API 확인<br>
