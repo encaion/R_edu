@@ -1,5 +1,5 @@
 #### 서울시 데이터 다운로드 ####
-
+# 서울시 교통량 이력 정보
 # https://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-13316&tMenu=11&#detailInfo
 
 key = ""
