@@ -1,9 +1,3 @@
-commute = fread("seoul_commute.csv", data.table = FALSE)
-colnames(commute) = c("year", "cat_1", "cat_2", paste0("time_", 1:5), "time_mean")
-head(commute)
-
-
-
 #### 서울시 데이터 다운로드 ####
  #
 key = "774b707659656e6331303264646b4f41"
@@ -97,10 +91,32 @@ head(df_traffic)
 
 # fwrite(df_traffic, "traffic_velocity_2016_modified.csv")
 
-# 행정구역별 사업체 및 근로자 수 현황(2015)
+#### 행정구역별 사업체 및 근로자 수 현황(2015) ####
 df = fread("seoul_companies_emp_count.csv", data.table = FALSE)
-df = df[-1, c(1:2, 4:5)]
+df = df[c(-1, -nrow(df)), c(1:2, 4:5)]
 colnames(df) = c("year", "name_kr", "count_corp", "count_emp")
 head(df)
 
+# fwrite(df, "seoul_corp_emp_count_2015.csv")
+
+#### 서울시 구별 인구 ####
+df_pop = fread("seoul_population_2015.csv", data.table = FALSE)
+colnames(df_pop) = c("year", "name_kr", "population")
+df_pop[, "population"] = as.numeric(gsub(pattern = "[^0-9]", 
+                                         replacement = "",
+                                         x = df_pop$population))
+head(df_pop)
+# fwrite(df_pop, "seoul_population_2015_modified.csv")
+
+#### 서울시 통근 관련 데이터 ####
+commute = fread("seoul_commute.csv", data.table = FALSE)
+commute = commute[29:53, -3]
+colnames_commute = colnames(commute)
+# [1] "기간"                  "대분류"                "30분 미만"            
+# [4] "30분-1시간 미만"       "1시간-1시간 30분 미만" "1시간 30분-2시간 미만"
+# [7] "2시간 이상"            "평균소요시간"
+colnames(commute) = c("year", "name_kr", paste0("time_", 1:5), "time_mean")
+head(commute)
+
+# fwrite(commute, "seoul_commute_2016_modified.csv")
 
