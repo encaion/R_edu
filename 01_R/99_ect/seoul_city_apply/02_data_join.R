@@ -14,6 +14,16 @@ head(df_pop)
 df_commute = fread("seoul_commute_2016_modified.csv", data.table = FALSE)
 head(df_commute)
 
+# 주차장 확보 관련 정보 가져오기
+df_park = fread("parkinglot_rate_2016.csv", data.table = FALSE)
+df_park = df_park[c(-1, -nrow(df_park)), ]
+colnames(df_park) = c("year", "name_kr", "car_reg", "car_area", "park_ratio")
+
+for(n in 3:5){
+  df_park[, n] = as.numeric(gsub(pattern = ",", replacement = "", x = df_park[, n]))
+}
+head(df_park)
+
 df_commute$time_mean
 
 kr_name_df_join = left_join(kr_name_df, df_corp_emp[, -1],
@@ -21,6 +31,8 @@ kr_name_df_join = left_join(kr_name_df, df_corp_emp[, -1],
 kr_name_df_join = left_join(kr_name_df_join, df_pop[, -1],
                             by = c("name_kr" = "name_kr"))
 kr_name_df_join = left_join(kr_name_df_join, df_commute[, -1],
+                            by = c("name_kr" = "name_kr"))
+kr_name_df_join = left_join(kr_name_df_join, df_park[, -1],
                             by = c("name_kr" = "name_kr"))
 head(kr_name_df_join)
 
