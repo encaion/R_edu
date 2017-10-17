@@ -84,6 +84,20 @@ ggplot(data = seoul_map,
         panel.background = element_rect(fill = "#FFFFFF",
                                         color = "#888888"))
 
+#### 행정구역별 주차장 확보 ####
+colnames(seoul_map)
+ggplot(data = seoul_map,
+       aes(x = long,
+           y = lat,
+           group = group)) + 
+  geom_polygon(aes(fill = park_ratio),
+               color = "#000000") + 
+  labs(fill = "주차장비율") +
+  theme(axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        panel.background = element_rect(fill = "#FFFFFF",
+                                        color = "#888888"))
 
 #### 행정구역별 차량 이동 속도 ####
 df_traffic = fread("traffic_velocity_2016_modified.csv", data.table = FALSE)
@@ -114,4 +128,3 @@ ggplot() +
   theme(legend.position = "none",
         axis.title = element_text(size = 15)) + 
   labs(y = "차량 통행 속도", x = NULL)
-
