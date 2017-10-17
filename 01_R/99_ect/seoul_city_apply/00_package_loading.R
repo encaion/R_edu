@@ -5,5 +5,6 @@ library("ggmap")
 library("sp")
 library("maptools")
 library("dplyr")
+library("corrplot")
 
 options(stringsAsFactors = FALSE)
