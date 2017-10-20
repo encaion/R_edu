@@ -42,3 +42,8 @@ gregexpr(pattern = "abc.*rrrr", text = test)
 # [1] 8
 # attr(,"useBytes")
 # [1] TRUE
+
+dd = "a 2 asd 123 dds 1"
+gsub(pattern = "^[a-z]{1} {1}[0-9]{1}",  replacement = "", x = dd)
+gsub(pattern =  "[a-z]{1} {1}[0-9]{1}",  replacement = "", x = dd)
+gsub(pattern =  "[a-z]{1} {1}[0-9]{1}$", replacement = "", x = dd)
