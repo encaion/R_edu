@@ -1,4 +1,4 @@
-text = readLines("http://www.naver.com")
+text = readLines("https://www.naver.com")
 Encoding(text) = "UTF-8"
 text_sub = grep(pattern = "ah_k", text, value = TRUE)[1:20]
 for(n in 1:length(text_sub)){
