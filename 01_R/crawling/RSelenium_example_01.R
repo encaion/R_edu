@@ -3,8 +3,6 @@
 port_no = sample(2000:8000, size = 1)
 
 library("wdman")
-chrome(port = port_no)
-phantomjs(port = port_no)
 selenium(port = port_no)
 
 library("RSelenium")
