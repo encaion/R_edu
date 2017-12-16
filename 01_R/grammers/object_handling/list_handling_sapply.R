@@ -17,3 +17,6 @@ list_1
 as.POSIXct(sapply(list_1, "[[", 1), origin = "1970-01-01")
 #                a                b                c 
 # "2017-02-04 KST" "2017-01-06 KST" "2017-04-26 KST" 
+
+# 리스트의 첫 번째 원소를 일괄 추출하는 방법
+sapply(list_obj, "[[", 1)
