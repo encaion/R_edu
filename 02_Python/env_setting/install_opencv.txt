@@ -1,3 +1,6 @@
 # Windows 10 + Anaconda + Python 3.6
 # execute code below on anaconda prompt
 python -m pip install opencv-python
+
+# [Reference]
+# https://www.scivision.co/install-opencv-python-windows/
