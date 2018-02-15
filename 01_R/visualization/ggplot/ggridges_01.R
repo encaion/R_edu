@@ -5,7 +5,8 @@ library("lubridate")
 library("viridis")
 library("ggridges")
 
-df_weather = read.csv("https://drive.google.com/file/d/0ByOfjCmqEilLYndpOWJyZXhPVUk/view", stringsAsFactors = FALSE)
+# download file from - https://drive.google.com/file/d/0ByOfjCmqEilLYndpOWJyZXhPVUk/view
+df_weather = read.csv("weather.csv", stringsAsFactors = FALSE)
 df_weather[, "Month"] = month(df_weather$CST)
 df_weather[, "Month_order"] = factor(month.name[df_weather$Month],
                                      levels = month.name)
