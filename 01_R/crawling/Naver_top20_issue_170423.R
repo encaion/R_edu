@@ -1,5 +1,4 @@
-text = readLines("https://www.naver.com")
-Encoding(text) = "UTF-8"
+text = readLines("https://www.naver.com", encoding = "UTF-8")
 text_sub = grep(pattern = "ah_k", text, value = TRUE)[1:20]
 for(n in 1:length(text_sub)){
   start_p = gregexpr(text_sub[n], pattern = ">")[[1]][1] + 1
