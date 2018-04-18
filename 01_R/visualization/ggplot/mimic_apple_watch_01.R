@@ -6,7 +6,7 @@ ggplot() +
              alpha = 0.5,
              color = "#B3F5FA") + 
   scale_x_continuous(limits = c(1, 9)) + 
-  scale_y_continuous(limits = c(2.55, 4)) + 
+  scale_y_continuous(limits = c(2, 4)) + 
   coord_polar() +
   theme_void() +
   theme(panel.background = element_rect(fill = "#000000"))
