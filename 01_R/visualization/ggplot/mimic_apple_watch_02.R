@@ -7,6 +7,10 @@ ggplot(data = df,
            y = yy)) + 
   geom_hline(yintercept = seq(0, max(df$yy) + 1, length.out = 13),
              color = "#EEEEEE") +
+  geom_point(aes(x = 0,
+                 y = 0),
+             color = "#000000",
+             size = 20) + 
   geom_col(aes(y = max(df$yy) + 1),
            fill = "#000000",
            width = 1) + 
