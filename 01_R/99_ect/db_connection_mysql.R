@@ -13,3 +13,5 @@ con = dbConnect(drv = dri,
 df = dbGetQuery(conn = con,
            "select * from user")
 sapply(df, "class")
+
+dbColumnInfo(dbSendQuery(conn = con, "select * from user"))
