@@ -7,7 +7,7 @@ df = data.frame(obs = 1:900,
 df_col = aggregate(value ~ group + period, FUN = "quantile", data = df, probs = 0.75)
 df_col[, "value2"] = aggregate(value ~ group + period, FUN = "quantile", data = df, probs = 0.8)[, 3]
 
-ggplot(data = df_col,
+gg = ggplot(data = df_col,
        aes(x = as.factor(period),
            y = value)) + 
   geom_errorbar(aes(ymin = value,
@@ -52,3 +52,5 @@ ggplot(data = df_col,
                 width = 0) +
   labs(x = "Period[h]", y = "Dose Response\n[Median +/- IQR]") + 
   theme(strip.text = element_text(face = "bold"))
+
+print(gg)
