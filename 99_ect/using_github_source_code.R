@@ -7,4 +7,4 @@ source_from_github = function(url){
   eval(parse(text = script))
 }
 url_mine = "https://github.com/encaion/R_edu/blob/master/30_visualization/ggplot/statVis/stat_vis_01.R"
-source(url_mine)
+source_from_github(url_mine)
