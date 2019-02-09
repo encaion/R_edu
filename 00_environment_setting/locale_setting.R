@@ -6,6 +6,8 @@ Sys.setLocale("LC_ALL", "ko_KR.CP949")
 Sys.setLocale("LC_ALL", "ko_KR.UTF-8")
 
 # US
+Sys.setlocale("LC_TIME", "C") # recommend!!
+
 Sys.setlocale("LC_CTYPE", locale="C")
 
 Sys.setlocale("LC_TIME", "en_US.UTF-8")
