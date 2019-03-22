@@ -1,6 +1,7 @@
 # install.packages("intergraph")
 library("ggplot2")
 library("igraph")
+library("ggnetwork")
 
 df = data.frame(from = c(1, 2, 3),
                 to   = c(2, 3, 1))
