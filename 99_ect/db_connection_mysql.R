@@ -15,3 +15,7 @@ df = dbGetQuery(conn = con,
 sapply(df, "class")
 
 dbColumnInfo(dbSendQuery(conn = con, "select * from user"))
+
+# if there are latin-1 encoding characters!?
+# type this before get data
+dbGetQuery(conn = con, "set names 'utf8'") # or 'utf8mb4'
