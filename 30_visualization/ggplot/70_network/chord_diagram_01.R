@@ -51,11 +51,11 @@ ggraph(mygraph, layout = 'dendrogram', circular = TRUE) +
   geom_node_point(aes(filter = leaf, x = x*1.05, y=y*1.05)) +
   geom_conn_bundle(data = get_con(from = from, to = to), alpha=0.2, colour="skyblue", width=0.9) +
   geom_node_text(aes(x = x*1.1, y=y*1.1, filter = leaf, label=name, angle = angle, hjust=hjust), size=1.5, alpha=1) +
-  theme_void() +
   theme(legend.position="none",
         plot.margin=unit(c(0,0,0,0),"cm")) +
   expand_limits(x = c(-1.2, 1.2), y = c(-1.2, 1.2))
 
+# not working
 ggraph(mygraph, layout = 'dendrogram', circular = TRUE) + 
   geom_conn_bundle(data = get_con(from = from, to = to), alpha=0.2, width=0.9, aes(colour=..index..)) +
   scale_edge_colour_distiller(palette = "RdPu") +
@@ -66,4 +66,37 @@ ggraph(mygraph, layout = 'dendrogram', circular = TRUE) +
   theme_void() +
   theme(legend.position="none",
   plot.margin=unit(c(0,0,0,0),"cm")) +
+  expand_limits(x = c(-1.3, 1.3), y = c(-1.3, 1.3))
+
+# working
+ggraph(mygraph, layout = 'dendrogram', circular = TRUE) + 
+  geom_conn_bundle(data = get_con(from = from, to = to), alpha=0.2, width=0.9, aes(colour=..index..)) +
+  scale_edge_colour_distiller(palette = "RdPu") +
+  geom_node_text(aes(x = x*1.15, y=y*1.15, filter = leaf, label=name, angle = angle, hjust=hjust, colour=group), size=2, alpha=1) +
+  geom_node_point(aes(filter = leaf, x = x*1.07, y=y*1.07, colour=group, size=value, alpha=0.2)) +
+  scale_colour_manual(values= rep( brewer.pal(9,"Paired") , 30)) +
+  scale_size_continuous( range = c(0.1,10)) +
+  theme(legend.position="none",
+        plot.margin=unit(c(0,0,0,0),"cm"),
+        panel.background = element_blank(),
+        panel.grid = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank()) +
+  expand_limits(x = c(-1.3, 1.3), y = c(-1.3, 1.3))
+
+ggraph(mygraph, layout = 'dendrogram', circular = FALSE) + 
+  geom_conn_bundle(data = get_con(from = from, to = to), alpha=0.2, width=0.9, aes(colour=..index..)) +
+  scale_edge_colour_distiller(palette = "RdPu") +
+  geom_node_text(aes(x = x*1.15, y=y*1.15, filter = leaf, label=name, angle = angle, hjust=hjust, colour=group), size=2, alpha=1) +
+  geom_node_point(aes(filter = leaf, x = x*1.07, y=y*1.07, colour=group, size=value, alpha=0.2)) +
+  scale_colour_manual(values= rep( brewer.pal(9,"Paired") , 30)) +
+  scale_size_continuous( range = c(0.1,10)) +
+  theme(legend.position="none",
+        plot.margin=unit(c(0,0,0,0),"cm"),
+        panel.background = element_blank(),
+        panel.grid = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank()) +
   expand_limits(x = c(-1.3, 1.3), y = c(-1.3, 1.3))
