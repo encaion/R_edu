@@ -53,3 +53,7 @@ grep(pattern = "[a-b]", x = text_2, value = TRUE)
 grepl(pattern = "[a-b]", x = text_2)
 text_2[ grepl(pattern = "[a-b]", x = text_2)]
 text_2[!grepl(pattern = "[a-b]", x = text_2)]
+
+# remove unicodes
+# https://stackoverflow.com/questions/39993715/how-to-remove-unicode-u00a6-from-string
+gsub("^\\s*<U\\+\\w+>\\s*", "", x = text)
