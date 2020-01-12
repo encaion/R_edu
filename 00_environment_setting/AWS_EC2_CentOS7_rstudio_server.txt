@@ -1,0 +1,12 @@
+sudo -s
+yum update
+yum install epel-release
+yum install R
+yum install wget
+wget https://download2.rstudio.org/server/centos6/x86_64/rstudio-server-rhel-1.2.5033-x86_64.rpm
+yum install rstudio-server-rhel-1.2.5033-x86_64.rpm
+
+useradd rloha_test
+passwd rloha_test
+**
+rstudio-server status
