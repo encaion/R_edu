@@ -42,3 +42,10 @@ list_db
 # dbGetQuery(conn = con, "SELECT * FROM test")
 # dbSendQuery(conn = con, "INSERT INTO test (timestamp, name) 
 #             VALUES (CURRENT_TIMESTAMP, 'asdf')")
+
+# table size
+dbGetQuery(conn = con, "SELECT table_schema, sum(data_length) /1024/1024 AS mb 
+                        FROM information_schema.tables  
+                        GROUP BY table_schema 
+                        ORDER BY sum(data_length+index_length) DESC")
+
