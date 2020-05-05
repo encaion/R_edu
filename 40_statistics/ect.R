@@ -208,14 +208,17 @@ chisq.test(table(df$type), p = prop.table(table(df$type)))
 # 평균(z-test, t-test, wilcoxon), 분산(Levene), 비율(chisq-test)
 
 #### ANOVA ####
+# 세 집단 이상의 분산 분석(두 집단도 가능)
+# 독립변수 1개 - 일원분산 분석(One-way ANOVA)
+# 독립변수 2개 - 이원분산 분석(Two-way ANOVA)
+
 
 #### F-test ####
-# 세 집단이상의 분산 차이가 통계적으로 유의한지 검증하는 방법
+# 두 집단의 등분산 검정
 
 
 #### corr-test ####
-# 이전 슬라이드 다시 들고올 것
+# pearson/spearman/kendall
 # 귀무가설: 두 집단간 상관관계가 없다.
 # 대립가설: 두 집단간 상관관계가 있다.
-# http://math7.tistory.com/115
 
