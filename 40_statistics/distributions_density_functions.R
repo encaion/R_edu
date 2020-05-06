@@ -20,6 +20,10 @@ ggplot(data = df,
   geom_area(aes(y = value_3), alpha = 0.5, fill = "#89E1FF") + 
   geom_line(aes(y = value_3), alpha = 0.8, color = "#CCCCCC", size = 1) + 
   geom_area(aes(y = value_1), alpha = 0.5, fill = "#FF6400") +
-  geom_line(aes(y = value_1), alpha = 0.8, color = "#CCCCCC", size = 1)
+  geom_line(aes(y = value_1), alpha = 0.8, color = "#CCCCCC", size = 1) + 
+  scale_x_continuous(expands = c(0.01, 0.01)) + 
+  scale_y_continuous(expands = c(0.01, 0.01)) + 
+  theme_bw() + 
+  labels(x = NULL, y = NULL)
 
 
