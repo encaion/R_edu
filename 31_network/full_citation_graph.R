@@ -1,3 +1,5 @@
+library("igraph")
+
 graph = make_full_citation_graph(20, directed = FALSE)
 plot.igraph(graph)
 
