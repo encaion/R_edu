@@ -8,10 +8,6 @@ ks.test(x, z)
 
 
 # Shapiro-Wilk test
-
-# http://acpi.tistory.com/30
-# http://elearning.kocw.net/KOCW/document/2016/chungbuk/najonghwa/12.pdf
-
 # install.packages("nortest")
 
 z = rnorm(100)
@@ -24,64 +20,12 @@ lillie.test(z) # Lilliefors (Kolmogorov-Smirnov) test for normality
 pearson.test(z) # Pearson chi-square test for normality
 sf.test(z) # Shapiro-Francia test for normality
 
-
-#### p-value 시뮬레이션 ####
-# p-value는 귀무가설이 맞다는 전제 하에, 관측된 통계값 혹은 그 값보다 큰 값이 나올 확률 
-
 #### z-test ####
-
-# Q. 주어진 표본 집단의 1)평균과 2)표준편차를 구하여라.
-#   3)z-score를 계산하고 4)분위수 함수를 활용하여 상위 10%에 해당하는 값을 구하여라.
-#   5)4의 결과와 quantile() 함수의 결과를 비교하라.
-set.seed(123)
-sample = rnorm(n = 100, mean = 5, sd = 3)
-head(sample)
-
-ggplot() + 
-  geom_histogram(aes(x = sample),
-                 bins = 30,
-                 fill = "#FFFFFF",
-                 color = "#000000")
-
-mean(sample)
-sd(sample)
-
-sample_z = (sample - mean(sample))/sd(sample)
-head(sample_z)
-ggplot() + 
-  geom_histogram(aes(x = sample),
-                 bins = 30,
-                 fill = "#FF0000",
-                 color = "#000000",
-                 alpha = 0.4) +
-  geom_histogram(aes(x = sample_z),
-                 bins = 30,
-                 fill = "#0000FF",
-                 color = "#000000",
-                 alpha = 0.4)
-
-qnorm(p = 0.9, mean = mean(sample), sd = sd(sample))
-quantile(x = sample, probs = 0.9)
-
 # 표준 정규 분포를 따르는 Z-통계량 기반의 가설 검정
 # 연속형 자료(continuous data)에 사용
 # 모집단의 평균과 분산을 알고있는 경우 사용
 # 일반적으로 표본 크기가 30 이상인 경우 사용
 
-# 김치찌개에 돼지 고기 300g 씩 넣어서 파는 음식점이 있다.
-# 그런데 제공되는 고기 서른 덩이의 무게 평균이 294g 이었다.
-# 이 때, 이 음식점이 고기를 정량제공 하는지 알아보고자 한다.
-# (단, 모 표준편차는 10g 라고 한다.)
-# (모평균 = 300g, 표본 수 = 30, 표본 평균 = 294g, 모 표준편차 = 10g)
-
-# 귀무가설: 음식점은 돼지 고기를 정량제공 한다.
-# 대립가설: 음식점은 돼지 고기를 정량제공하지 않는다.
-
-(294 - 300)/(10/sqrt(30))
-pnorm(q = (294 - 300)/(10/sqrt(30)))
-# pnorm(q = (301 - 300)/(2/sqrt(30)))
-# p가 높은 경우 => 정량제공
-# p가 낮은 경우 => 정량제공하지 않음
 
 prop.test(x = 170, 1000, p = 0.20)
 # 1-sample proportions test with continuity correction
@@ -206,19 +150,4 @@ chisq.test(c(6, 84, 140, 270), p = prop.table(table(df$type)))
 chisq.test(table(df$type), p = prop.table(table(df$type)))
 
 # 평균(z-test, t-test, wilcoxon), 분산(Levene), 비율(chisq-test)
-
-#### ANOVA ####
-# 세 집단 이상의 분산 분석(두 집단도 가능)
-# 독립변수 1개 - 일원분산 분석(One-way ANOVA)
-# 독립변수 2개 - 이원분산 분석(Two-way ANOVA)
-
-
-#### F-test ####
-# 두 집단의 등분산 검정
-
-
-#### corr-test ####
-# pearson/spearman/kendall
-# 귀무가설: 두 집단간 상관관계가 없다.
-# 대립가설: 두 집단간 상관관계가 있다.
 
